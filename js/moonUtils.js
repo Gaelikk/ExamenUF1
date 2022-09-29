@@ -56,12 +56,6 @@ function getMonthlyCorrection(month) {
     let monthNum = month.substring(5, 7);
 
 
-    for (let i = 0; correction.length; i++) {
-        phrase = correction.substring(1);
-        console.log(phrase)
-        i++;
-    }
-
 
 
     return;//Must return the monthly correction
@@ -97,10 +91,12 @@ function getMoonAge(date) {
 * lunar phase corresponding to the moon age
 * */
 function getMoonPhase(age) {
+    let image = document.getElementById('image');
 
     switch (age) {
         case (age < 1):
-            break;
+            image.src= 'img/Moon001.png'
+            return image.appendChild('img/Moon001.png')
         case (age < 6):
             break;
         case (age < 8):
@@ -112,6 +108,5 @@ function getMoonPhase(age) {
         case (age < 30):
             break;
     }
-
 }
 
