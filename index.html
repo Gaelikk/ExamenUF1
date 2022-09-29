@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/moonPhase.css">
+    <script type="application/javascript" src="js/moonUtils.js"></script>
+</head>
+
+<body>
+    <div>
+        <input id="date" type="date" onchange="loadDate();">
+        <div id="moonPhase">
+            <figure>
+                <figcaption>
+                    <h3 id="dateTitle"></h3>
+                </figcaption>
+                <img id="image" src="">
+                <figcaption>
+                    <cite>
+                    </cite>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <script>
+        addEventListener("load", () => {
+            loadFigure();
+            loadDate(moonPhase);
+        });
+
+        function loadDate(moonPhase) {
+            let date = document.getElementById('date').value;
+            let img = document.getElementById('image');
+
+
+            getMonthlyCorrection(date)
+
+            getMoonAge(date);
+
+        }
+
+        function loadFigure() {
+
+        }
+    </script>
+
+</body>
+
+</html>
